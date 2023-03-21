@@ -1,2 +1,19 @@
 @charset "UTF8";
 @import url("index.css");
+
+h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 24pt;
+    margin: 10px 0 2px;
+    color: var(--title);
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 13pt;
+}
+
+.panel, #dropdown-menu, form input {
+    transition: background-color .2s ease-in, color .3s ease-in;
+}
