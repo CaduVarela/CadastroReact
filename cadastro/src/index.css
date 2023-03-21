@@ -1,0 +1,32 @@
+:root {
+  --darker: #333333;
+  --dark: #3a3b40;
+  --blue: #718dc0;
+  --light-blue: #87a2d8;
+  --light: #f3f3ec;
+  --lighter: #fff8f0;
+}
+
+.light {
+  --background: var(--lighter);
+  --panel: var(--light);
+  --title: var(--darker);
+  --text: var(--dark);
+  --detail: var(--light-blue);
+}
+
+.dark {
+  --background: var(--darker);
+  --panel: var(--dark);
+  --title: var(--lighter);
+  --text: var(--light);
+  --detail: var(--blue);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color .21s ease-in;
+  margin: 0;
+  padding: 0;
+}
