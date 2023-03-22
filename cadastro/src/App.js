@@ -25,7 +25,7 @@ function App() {
         </li>
       </DropdownMenu>
       <div className="panel">
-        <h1 class="center">Titulo Maior</h1>
+        <h1 className="center">Titulo Maior</h1>
         <article>
             <div>
                 <h1>Artigo</h1>

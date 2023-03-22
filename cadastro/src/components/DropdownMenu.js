@@ -4,9 +4,9 @@ import { TfiAlignJustify } from 'react-icons/tfi';
 const DropdownMenu = ({children}) => {
 
     return(
-        <div id="dropdown-menu" className="has-dropdown">
-            <a href="#" id="dropdown-menu-label">
-                <TfiAlignJustify id="dropdown-icon"/>
+        <div className="dropdown-menu has-dropdown">
+            <a href="#" className="dropdown-menu-label">
+                <TfiAlignJustify className="dropdown-icon"/>
             </a>
             <ul className="dropdown-list">
                 {children}

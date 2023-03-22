@@ -35,7 +35,7 @@ html {
 
 body {
   /*background-color: var(--background);*/
-  background: linear-gradient(310deg, #fdba9494 10%, #b0ffee86 80%);
+  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
