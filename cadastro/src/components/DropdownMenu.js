@@ -5,9 +5,9 @@ const DropdownMenu = ({children}) => {
 
     return(
         <div className="dropdown-menu has-dropdown">
-            <a href="#" className="dropdown-menu-label">
+            <button className="dropdown-menu-label">
                 <TfiAlignJustify className="dropdown-icon"/>
-            </a>
+            </button>
             <ul className="dropdown-list">
                 {children}
             </ul>

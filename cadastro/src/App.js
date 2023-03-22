@@ -1,32 +1,34 @@
 import './App.css';
 
-import {useState, useEffect} from "react";
-import DropdownMenu from "./components/DropdownMenu";
+import {useState, useEffect} from 'react';
+import DropdownMenu from './components/DropdownMenu';
 import SignupScreen from './components/SignupScreen';
+import LoginScreen from './components/LoginScreen';
 
 function App() {
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     document.body.classList.add(theme);
   });
 
   return (
-    <div className="app">
+    <div className='app'>
       <DropdownMenu>
         <li>
-          <a href="#">Home</a>
+          <button>Home</button>
         </li>
         <li>
-          <a href="#">Signup</a>
+          <button>Signup</button>
         </li>
         <li>
-          <a href="#">Login</a>
+          <button>Login</button>
         </li>
       </DropdownMenu>
 
       <SignupScreen/>
+      <LoginScreen/>
     </div>
   );
 }

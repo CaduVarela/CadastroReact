@@ -9,7 +9,7 @@
 }
 */
 
-.form-cadastro {
+.form-cadastro-login {
     display: block;
     width: 40%;
     min-width: 245px;
@@ -46,30 +46,38 @@ form input:focus, form input:hover {
     background-color: rgba(0, 0, 0, .1);
 }
 
-form input[type="text"], form input[type="password"], form input[type="email"] {
+form input[type='text'], form input[type='password'], form input[type='email'] {
     width: 100%;
 }
 
-.campo-sexo input, #campo-sexo label {
+form input[type='submit'] {
+    padding: .5em 1em 1.7em;
+}
+
+form input[type='submit']:hover {
+    cursor: pointer;
+}
+
+#campo-sexo input, #campo-sexo label {
     display: inline;
     cursor: pointer;
     box-shadow: none;
 }
 
-.campo-sexo input {
+#campo-sexo input {
     margin-top: 10px;
     margin-right: 5px;
 }
 
-.campo-sexo label {
+#campo-sexo label {
     margin-right: 25px;
 }
 
-.campo-sexo label::selection {
+#campo-sexo label::selection {
     background-color: none;
 }
 
-.campo-sexo {
+#campo-sexo {
     display: flex;
     vertical-align: middle;
     align-items: center;
