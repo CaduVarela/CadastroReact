@@ -35,13 +35,20 @@ html {
 
 body {
   /*background-color: var(--background);*/
-  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
   transition: background-color .21s ease-in;
   margin: 0;
   padding: 0;
+}
+
+.light {
+  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
+}
+
+.dark {
+  background: linear-gradient(310deg, #3a3a35 10%,  #232725 80%);
 }
 
 .panel {
