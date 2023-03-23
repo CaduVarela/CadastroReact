@@ -1,4 +1,5 @@
 @charset "utf8";
+@import url("../index.css");
 
 #theme-switcher {
     position: fixed;
@@ -27,11 +28,12 @@
 }
 
 .light #theme-switcher svg {
-    filter: hue-rotate(180deg) grayscale(0) invert(0) brightness(1) contrast(1);
+    color: var(--detail);
+    filter: brightness(1.1);
 }
 
 .dark #theme-switcher svg {
-    filter: hue-rotate(180deg) grayscale(1) invert(1) brightness(2.5) contrast(.6);
+    filter: grayscale(1) brightness(1);
 }
 
 #bulb-cable {

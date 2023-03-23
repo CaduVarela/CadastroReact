@@ -8,11 +8,25 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 
 function App() {
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     document.body.classList.add(theme);
   });
+
+  function handleThemeSwitch()  {
+
+    if (theme === 'light') {
+      setTheme('dark');
+      document.body.classList.remove('light');
+      document.body.classList.remove('dark');
+    }
+    else {
+      setTheme('light');
+      document.body.classList.remove('dark');
+      document.body.classList.remove('light');
+    }
+  }
 
   return (
     <div className='app'>
@@ -27,7 +41,7 @@ function App() {
           <button>Login</button>
         </li>
       </DropdownMenu>
-      <ThemeSwitcher/>
+      <ThemeSwitcher theme={theme} onClick={handleThemeSwitch}/>
 
       <SignupScreen/>
       <LoginScreen/>

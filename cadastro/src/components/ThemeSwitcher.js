@@ -1,12 +1,13 @@
 import "./ThemeSwitcher.css";
-import { TfiLightBulb } from "react-icons/tfi";
+//import { TfiLightBulb } from "react-icons/tfi";
+import { BsLightbulb, BsLightbulbFill } from "react-icons/bs";
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher = ({theme, onClick}) => {
 
     return(
-        <button id="theme-switcher" onclick="switchtheme()">
+        <button id="theme-switcher" onClick={onClick}>
             <div id="bulb-cable"></div>
-            <TfiLightBulb/>
+            {theme == 'light' ? <BsLightbulbFill/> : <BsLightbulb/>}
         </button>
     );
 }

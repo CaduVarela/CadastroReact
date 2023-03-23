@@ -38,9 +38,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
-  transition: background-color .21s ease-in;
   margin: 0;
   padding: 0;
+  transition: all .21s ease-in;
 }
 
 .light {
