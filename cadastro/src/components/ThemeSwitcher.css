@@ -1,0 +1,47 @@
+@charset "utf8";
+
+#theme-switcher {
+    position: fixed;
+    left: 2%;
+    top: 70px;
+    
+    background-color: transparent;
+
+    width: 40px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+
+    border-radius: 20px;
+    border: 0;
+
+    cursor: pointer;
+    transition: box-shadow .2 ease-in;
+}
+
+#theme-switcher svg {
+    width: 40px;
+    height: 40px;
+    transition: filter .2s ease-out;
+    transform: rotate(180deg) translateX(-1px);
+}
+
+.light #theme-switcher svg {
+    filter: hue-rotate(180deg) grayscale(0) invert(0) brightness(1) contrast(1);
+}
+
+.dark #theme-switcher svg {
+    filter: hue-rotate(180deg) grayscale(1) invert(1) brightness(2.5) contrast(.6);
+}
+
+#bulb-cable {
+    position: fixed;
+    background-color: rgb(180, 180, 180);
+    width: 1px;
+    height: 76px;
+    top: 0;
+    left: calc(2% + 20px);
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid rgb(180, 180, 180);
+}
