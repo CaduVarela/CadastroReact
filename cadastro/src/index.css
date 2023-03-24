@@ -41,17 +41,18 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
-  transition: background-color .21s ease-in;
+  /*background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);*/
+  transition: background-color .2s ease-in;
 }
 
 .light {
-  /*background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);*/
+  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
 }
 
 .dark {
   /*background: linear-gradient(310deg, #3d3c31 10%, #31373b  80%);*/
-  background-color: rgb(16, 53, 39);
+  background: linear-gradient(310deg, #ffdb8827 10%, #52566186 80%);
+  background-color: rgb(0, 0, 0);
   /*backdrop-filter: grayscale(.5) brightness(.4) contrast(1);*/
 }
 

@@ -33,6 +33,7 @@
 }
 
 .dark #theme-switcher svg {
+    color: #ccc;
     filter: grayscale(1) brightness(1);
 }
 
