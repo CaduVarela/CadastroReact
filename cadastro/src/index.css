@@ -40,15 +40,19 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
-  transition: all .21s ease-in;
+  height: 100%;
+  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
+  transition: background-color .21s ease-in;
 }
 
 .light {
-  background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);
+  /*background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);*/
 }
 
 .dark {
-  background: linear-gradient(310deg, #3d3c31 10%, #31373b  80%);
+  /*background: linear-gradient(310deg, #3d3c31 10%, #31373b  80%);*/
+  background-color: rgb(16, 53, 39);
+  /*backdrop-filter: grayscale(.5) brightness(.4) contrast(1);*/
 }
 
 .panel {
