@@ -29,7 +29,7 @@
 
 .light #theme-switcher svg {
     color: var(--detail);
-    filter: brightness(1.1);
+    filter: brightness(1) contrast(1.2);
 }
 
 .dark #theme-switcher svg {
@@ -41,7 +41,7 @@
     position: fixed;
     background-color: rgb(180, 180, 180);
     width: 1px;
-    height: 76px;
+    height: 77px;
     top: 0;
     left: calc(2% + 20px);
     padding: 0;

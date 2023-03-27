@@ -1,6 +1,7 @@
 import "./ThemeSwitcher.css";
 //import { TfiLightBulb } from "react-icons/tfi";
 //import { BsLightbulb, BsLightbulbFill } from "react-icons/bs";
+ import { FaLightbulb, FaRegLightbulb } from "react-icons/fa";
 import { IoBulb, IoBulbOutline } from "react-icons/io5";
 
 const ThemeSwitcher = ({theme, onClick}) => {
