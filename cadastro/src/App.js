@@ -15,17 +15,11 @@ function App() {
   });
 
   function handleThemeSwitch()  {
-
-    if (theme === 'light') {
+    document.body.classList.remove(theme);
+    if (theme === 'light')
       setTheme('dark');
-      document.body.classList.remove('light');
-      document.body.classList.remove('dark');
-    }
-    else {
+    else
       setTheme('light');
-      document.body.classList.remove('dark');
-      document.body.classList.remove('light');
-    }
   }
 
   return (
