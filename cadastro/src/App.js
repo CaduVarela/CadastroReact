@@ -10,18 +10,6 @@ function App() {
 
   const [theme, setTheme] = useState('light');
 
-  useEffect(() => {
-    document.body.classList.add(theme);
-  });
-
-  function handleThemeSwitch()  {
-    document.body.classList.remove(theme);
-    if (theme === 'light')
-      setTheme('dark');
-    else
-      setTheme('light');
-  }
-
   return (
     <div className='app'>
       <DropdownMenu>
@@ -35,7 +23,7 @@ function App() {
           <button>Login</button>
         </li>
       </DropdownMenu>
-      <ThemeSwitcher theme={theme} onClick={handleThemeSwitch}/>
+      <ThemeSwitcher/>
 
       <SignupScreen/>
       <LoginScreen/>
