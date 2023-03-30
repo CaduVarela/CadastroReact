@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const ThemeSwitcher = () => {
 
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('light');
 
     useEffect(() => {
         document.body.classList.add(theme);

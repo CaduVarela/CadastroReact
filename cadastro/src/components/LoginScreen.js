@@ -1,10 +1,11 @@
 import './Signup&Login.css';
 
 const LoginScreen = () => {
+
     return(
         <div className='panel'>
             <h1 className='center'>Login</h1>
-            <form className='form-cadastro-login' action='#'>
+            <form className='form-cadastro-login'>
                 <label htmlFor='campo-email' className='bold'>Email</label>
                 <input type='email' id='campo-email' name='campo-email'/>
 

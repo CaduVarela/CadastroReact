@@ -58,26 +58,26 @@ form input[type='submit']:hover {
     cursor: pointer;
 }
 
-#campo-sexo input, #campo-sexo label {
+#campoSexo input, #campoSexo label {
     display: inline;
     cursor: pointer;
     box-shadow: none;
 }
 
-#campo-sexo input {
+#campoSexo input {
     margin-top: 10px;
     margin-right: 5px;
 }
 
-#campo-sexo label {
+#campoSexo label {
     margin-right: 25px;
 }
 
-#campo-sexo label::selection {
+#campoSexo label::selection {
     background-color: none;
 }
 
-#campo-sexo {
+#campoSexo {
     display: flex;
     vertical-align: middle;
     align-items: center;
@@ -87,4 +87,8 @@ form input[type='submit']:hover {
 form label {
     font-family: 'Mulish', sans-serif;
     font-size: 11pt;
+}
+
+.wrong {
+    border-color: #b36969;
 }
