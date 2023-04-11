@@ -89,6 +89,46 @@ form label {
     font-size: 11pt;
 }
 
+#campoSenha, #campoConfirmar {
+    transition: all .25s;
+}
+
+#form-info {
+    display: none;
+    width: 45%;
+    min-width: 245px;
+    margin: 10px auto 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#form-info ul {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: -5px;
+    margin: 15px 11%;
+}
+
+#form-info li {
+    padding: 0;
+    margin: 0;
+}
+
+#form-info p {
+    text-align: center;
+}
+
+#form-info.error {
+    display: block;
+    background-color: #ec7f7f46;
+}
+
+#form-info.success {
+    display: block;
+    background-color: #b0ec7f46;
+}
+
 .wrong {
-    border-color: #b36969;
+    box-shadow: 0px 0px 2px #ff000034;
+    border-color: #ec7f7f;
 }
