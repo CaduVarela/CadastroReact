@@ -6,7 +6,7 @@
 
 :root {
   --darker: #333333;
-  --dark: #3a3b40;
+  --dark: #3b3b44;
   --blue: #718dc0;
   --light-blue: #87a2d8;
   --light: #f3f3ec;
@@ -31,6 +31,12 @@
 
 html {
   font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
 }
 
 body {
@@ -40,7 +46,6 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
-  height: 100%;
   /*background: linear-gradient(310deg, #ffd16d5d 10%, #b0c9ff86 80%);*/
   transition: background-color .2s ease-in;
 }
@@ -51,8 +56,9 @@ body {
 
 .dark {
   /*background: linear-gradient(310deg, #3d3c31 10%, #31373b  80%);*/
-  background: linear-gradient(310deg, #ffdb8827 10%, #52566186 80%);
-  background-color: rgb(0, 0, 0);
+  background: linear-gradient(310deg, #f7e7a02c   5%, #4d4d5581 80%);
+  /*background: linear-gradient(310deg, #7c73a160 10%, #74798a79 80%);*/
+  background-color: rgb(13, 14, 20);
   /*backdrop-filter: grayscale(.5) brightness(.4) contrast(1);*/
 }
 
