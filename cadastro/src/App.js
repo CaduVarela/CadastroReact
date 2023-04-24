@@ -8,7 +8,7 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  //const [theme, setTheme] = useState('light');
 
   return (
     <div className='app'>

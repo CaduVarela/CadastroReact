@@ -1,3 +1,42 @@
 {
-  "cadastros": []
+  "cadastros": [
+    {
+      "nome": "Carlos",
+      "email": "caduvarela@gmail.com",
+      "sexo": "M",
+      "senha": "senha",
+      "id": 1
+    },
+    {
+      "nome": "cadu",
+      "email": "caduvarela2@gmail.com",
+      "sexo": "M",
+      "senha": "senha",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    }
+  ]
 }

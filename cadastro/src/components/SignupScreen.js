@@ -60,7 +60,7 @@ const SignupScreen = () => {
 
         if (error) return;
 
-        // Prepara dados para inserir no "banco de dados"
+        // Prepara dados para inserir no banco de dados
         const usuario = {
             nome: campoNome.value,
             email: campoEmail.value,
@@ -93,7 +93,7 @@ const SignupScreen = () => {
     return(
         <div className='panel'>
             <h1 className='center'>Cadastro</h1>
-            <div id='form-info'>
+            <div className='form-info-cadastro'>
                 {sucessoCadastro && <p>Cadastro realizado com sucesso!</p>}
                 <ul>
                     {erroEmail && <li>Este email já está cadastrado...</li>}

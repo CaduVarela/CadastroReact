@@ -93,7 +93,7 @@ form label {
     transition: all .25s;
 }
 
-#form-info {
+#form-info-cadastro, #form-info-login {
     display: none;
     width: 45%;
     min-width: 245px;
@@ -102,28 +102,28 @@ form label {
     border-radius: 4px;
 }
 
-#form-info ul {
+#form-info-cadastro ul, #form-info-login ul {
     padding: 0;
     padding-left: 5px;
     padding-right: -5px;
     margin: 15px 11%;
 }
 
-#form-info li {
+#form-info-cadastro li, #form-info-login li {
     padding: 0;
     margin: 0;
 }
 
-#form-info p {
+#form-info-cadastro p, #form-info-login p {
     text-align: center;
 }
 
-#form-info.error {
+#form-info-cadastro.error, #form-info-login.error {
     display: block;
     background-color: #ec7f7f46;
 }
 
-#form-info.success {
+#form-info-cadastro.success, #form-info-login.success {
     display: block;
     background-color: #b0ec7f46;
 }
