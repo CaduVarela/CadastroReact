@@ -15,7 +15,7 @@ const SignupScreen = () => {
         e.preventDefault();
 
         // Limpa mensagens de erro e sucesso
-        let formInfo = document.getElementById('form-info');
+        let formInfo = document.getElementById('form-info-cadastro');
         formInfo.classList.remove('success');
         formInfo.classList.remove('error');
         setSucessoCadastro(false);
@@ -93,7 +93,7 @@ const SignupScreen = () => {
     return(
         <div className='panel'>
             <h1 className='center'>Cadastro</h1>
-            <div className='form-info-cadastro'>
+            <div id='form-info-cadastro'>
                 {sucessoCadastro && <p>Cadastro realizado com sucesso!</p>}
                 <ul>
                     {erroEmail && <li>Este email já está cadastrado...</li>}

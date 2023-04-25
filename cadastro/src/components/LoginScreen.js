@@ -1,14 +1,21 @@
 import './Signup&Login.css';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const API = "http://localhost:5000";
 
-const LoginScreen = () => {
+const LoginScreen = ({setLoginUpdate}) => {
 
     const [sucessoLogin, setSucessoLogin] = useState(false);
     const [erroEmail, setErroEmail] = useState(false);
     const [erroSenha, setErroSenha] = useState(false);
+
+    const getUserByEmail = async (email) => {
+        const resposta = await fetch(API+"/cadastros?email="+email, {
+            method: "GET",
+        }).then((resposta) => resposta.json());
+        return resposta[0];
+    }
 
     const handleSubmit = async (e) => {
         // Previne carregamento da pagina
@@ -23,6 +30,7 @@ const LoginScreen = () => {
         // campos do formulario
         let campoEmail = e.target.campoEmail;
         let campoSenha = e.target.campoSenha;
+        let manterLogin = e.target.manterLogin;
 
         // Prepara o usuario com os dados informados no formulario
         const entrada = {
@@ -31,37 +39,52 @@ const LoginScreen = () => {
         }
 
         // Encontra o usuario, se houver
-        const resposta = await fetch(API+"/cadastros?email="+entrada.email, {
-            method: "GET",
-        }).then((resposta) => resposta.json());
+        const usuario = await getUserByEmail(entrada.email);
 
-        const usuario = resposta[0];
+        console.log(entrada);
+        console.log(usuario);
 
         // Verifica email
         if (!usuario) {
             setErroEmail(true);
             formInfo.classList.add('error');
+            campoEmail.classList.add('wrong');
             //console.log("Usuario inexistente");
             return;
         } else {
             setErroEmail(false);
             formInfo.classList.remove('error');
+            campoEmail.classList.remove('wrong');
         };
 
         // Verifica senha
         if (usuario.senha != entrada.senha) {
             setErroSenha(true);
             formInfo.classList.add('error');
+            campoSenha.classList.add('wrong');
             //console.log("Senha errada");
             return;
         } else {
             setErroSenha(false);
             formInfo.classList.remove('error');
+            campoSenha.classList.remove('wrong');
         };
+
+        // Manter Login
+        localStorage.clear();
+        sessionStorage.clear();
+        
+        if (manterLogin.checked) {
+            localStorage.setItem('user', usuario.email);
+        } else {
+            sessionStorage.setItem('user', usuario.email);
+        }
 
         // Mensagem de sucesso
         setSucessoLogin(true);
         formInfo.classList.add("success");
+        setLoginUpdate(true);
+        setLoginUpdate(false);
 
         // Limpa os campos
         campoEmail.value = '';
@@ -84,6 +107,9 @@ const LoginScreen = () => {
 
                 <label htmlFor='campoSenha' className='bold'>Senha</label>
                 <input type='password' id='campoSenha' name='campoSenha' required/>
+
+                <input type='checkbox' id='manterLogin' name='manterLogin'/>
+                <label htmlFor='manterLogin' className='pointer not-selectable'>Manter Login</label>
 
                 <input type='submit' value='Enviar'/>
             </form>
