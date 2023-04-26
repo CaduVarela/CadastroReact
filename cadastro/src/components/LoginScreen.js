@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const API = "http://localhost:5000";
 
-const LoginScreen = ({setLoginUpdate}) => {
+const LoginScreen = ({setLoginUpdate, loginUpdate}) => {
 
     const [sucessoLogin, setSucessoLogin] = useState(false);
     const [erroEmail, setErroEmail] = useState(false);
@@ -41,8 +41,8 @@ const LoginScreen = ({setLoginUpdate}) => {
         // Encontra o usuario, se houver
         const usuario = await getUserByEmail(entrada.email);
 
-        console.log(entrada);
-        console.log(usuario);
+        //console.log(entrada);
+        //console.log(usuario);
 
         // Verifica email
         if (!usuario) {
@@ -80,11 +80,11 @@ const LoginScreen = ({setLoginUpdate}) => {
             sessionStorage.setItem('user', usuario.email);
         }
 
+        setLoginUpdate(!loginUpdate);
+
         // Mensagem de sucesso
         setSucessoLogin(true);
         formInfo.classList.add("success");
-        setLoginUpdate(true);
-        setLoginUpdate(false);
 
         // Limpa os campos
         campoEmail.value = '';

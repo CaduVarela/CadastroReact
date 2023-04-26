@@ -34,13 +34,13 @@ function App() {
   const clearStorage = () => {
     localStorage.clear();
     sessionStorage.clear();
-    setLoginUpdate(true);
-    setLoginUpdate(false);
+    setUsuario(null);
+    setLoginUpdate(!loginUpdate);
   }
 
   useEffect(() => {
     getUsuario();
-  }, ['loginUpdate']);
+  }, [loginUpdate]);
 
   return (
     <div className='app'>
@@ -64,22 +64,18 @@ function App() {
       </DropdownMenu>
       <ThemeSwitcher/>
 
+      {usuario &&
       <div id='user-info' className='panel'>
         <h1>Info</h1>
-        {!usuario && 
-          <p>Nenhum usuário logado</p>
-        }
-        {usuario &&
           <div>
             <p><span className='bold'>Nome: </span>{usuario.nome}</p>
-            <p><span className='bold'>sexo: </span>{usuario.sexo == 'M' ? 'Masculino' : 'Feminino'}</p>
+            <p><span className='bold'>sexo: </span>{usuario.sexo == 'M' ? 'masculino' : 'feminino'}</p>
             <p><span className='bold'>Email: </span>{usuario.email}</p>
             <button onClick={clearStorage}>Sair da conta</button>
           </div>
-        }
-      </div>
+      </div>}
 
-      {!usuario && <LoginScreen loginUpdate={setLoginUpdate}/>}
+      {!usuario && <LoginScreen setLoginUpdate={setLoginUpdate} loginUpdate={loginUpdate}/>}
       {!usuario && <SignupScreen/>}
     </div>
   );
